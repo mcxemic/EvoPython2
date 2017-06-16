@@ -33,7 +33,7 @@ def get_counter(hashsum):
         cashecounter = 0
         obj = CountSHA.objects.filter(key=hashsum)
         for i in obj:
-            i.value += 1
+            i.value += 0.5
             i.save()
             cashecounter = i
         return cashecounter
